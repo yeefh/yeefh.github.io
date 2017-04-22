@@ -26,9 +26,14 @@ Open the browser and visit http://yeefh.github.io/views/pizza.html.
 
 2. *windowWidth* var moved from **determineDx** function to **changePizzaSizes** funtion. Add new parameter *windowWidth* to **determineDx** function.
 
-3. Made **resizePizzas** function more modular and easier to read by move the following functions out:
+3. Made **resizePizzas** function more modular and easier to read by moving the following functions out:
     * **determineDx**
     * **changePizzaSizes**
 
+4. Store the query selector document.querySelectorAll(".randomPizzaContainer") into a var outside the loop as the number of elements is static.
+
+
 ### Optimizing Frame Rate when Scrolling
-Modified **updatePositions** function to reduce the count number for the loop
+1. Store document.body.scrollTop / 1250 into a var outside the loop as the value is static.
+
+2. Store document.querySelector("#movingPizzas1") into a var outside the loop as the number of elements is static.
